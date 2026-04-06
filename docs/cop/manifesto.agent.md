@@ -113,9 +113,36 @@ When working in COP:
 
 ---
 
+## 11. Prefer Feature-Based Structure
+
+Implementation must be organized around features (capabilities), not types.
+
+Do NOT organize code by:
+- models/
+- services/
+- utils/
+- controllers/
+
+Instead, organize code by feature, where each feature corresponds to a contract or capability.
+
+Each feature should be self-contained and may include:
+- data models
+- business logic
+- supporting utilities
+- internal helpers
+
+---
+
+## 12. Align Structure to Contracts
+
+Where possible:
+
+- Each contract should map to a feature or module boundary
+- Code organization should reflect contract boundaries
+- Related logic should live together within the same feature
+
+---
+
 ## Summary
 
-You are not generating code freely.
-
-You are:
-> implementing a system that must strictly conform to a defined contract
+Structure must reflect behavior, not technical categories.
