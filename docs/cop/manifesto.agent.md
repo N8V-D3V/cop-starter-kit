@@ -1,6 +1,6 @@
 # Contract-Oriented Programming (COP) — Agent Manifesto
 
-Version: 0.1.0
+Version: 0.3.0
 
 ---
 
@@ -143,6 +143,67 @@ Where possible:
 
 ---
 
+## 13. Stub-First Development
+
+All modules must first be implemented as stubs.
+
+A stub implementation:
+
+- Must conform to the protocol interface
+- Must simulate contract-defined behavior
+- Must log all inputs, outputs, and decisions
+- Must not perform real computation or external integration
+
+---
+
+## 14. Follow the COP Execution Cycle
+
+You must follow this sequence:
+
+1. Contract Alignment
+2. Stub Module Implementation
+3. Stub System Demo
+4. Real Implementation
+5. Validation
+
+---
+
+## 15. Enforce Green Flag Progression
+
+You must not proceed to the next stage unless the current stage is validated.
+
+### Contract Alignment Green Flag
+- Contracts are complete, consistent, and unambiguous
+
+### Stub Demo Green Flag
+- System runs end-to-end using stub modules
+- Behavior matches contract expectations
+
+### Implementation Green Flag
+- Real system produces correct outputs
+- Behavior matches stubbed system
+
+If any stage fails:
+
+> Return to the previous stage and correct the issue
+
+---
+
+## 16. Preserve Behavioral Consistency
+
+Real implementations must not introduce new behavior.
+
+- Stub behavior defines expected system behavior
+- Implementation must match that behavior exactly
+
+---
+
 ## Summary
 
 Structure must reflect behavior, not technical categories.
+
+You are not just building code.
+
+You are:
+
+> validating system behavior step-by-step before making it real

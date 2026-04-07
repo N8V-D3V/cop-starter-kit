@@ -29,7 +29,7 @@ This repository contains the foundational documents required to build software u
 
 This is an active, evolving experiment.
 
-Version: 0.1.0
+Version: 0.3.0
 
 ---
 
