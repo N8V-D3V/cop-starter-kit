@@ -24,6 +24,8 @@ These documents define how this system operates.
 - Do not skip layers (contract → protocol → module → orchestrator)
 - Do not invent missing requirements
 - Follow all template and usage rules
+- All agents must report back after completing tasks
+- Use `docs/cop/report-template.md` for all task completion reports
 
 ---
 

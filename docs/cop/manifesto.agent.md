@@ -200,9 +200,10 @@ Real implementations must not introduce new behavior.
 
 ## Summary
 
+Structure must reflect behavior, not technical categories.
+
 You are not just building code.
 
 You are:
 
 > validating system behavior step-by-step before making it real
-
