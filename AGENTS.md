@@ -9,6 +9,7 @@ This project follows **Contract-Oriented Programming (COP)**.
 Before performing any work, you MUST review:
 
 - `docs/cop/manifesto.agent.md`
+- `docs/cop/workflow.md`
 - `docs/cop/contract-template.md`
 - `docs/cop/contract-template-usage.md`
 - `docs/cop/glossary.md`

@@ -35,7 +35,7 @@ An AI or human role responsible for performing a specific function within the CO
 ---
 
 ## Artifact
-A structured output produced during the development process (e.g., contract, protocol spec, validation report).
+A structured output produced during the development process (e.g., contract, protocol spec, architecture plan, validation report).
 
 ---
 

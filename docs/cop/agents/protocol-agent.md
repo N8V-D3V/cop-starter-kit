@@ -27,7 +27,7 @@ Defines interfaces (protocols) required to fulfill contracts.
 
 ## Outputs
 
-- Protocol/interface definitions
+- Protocol/interface definitions using `protocol-template.md`
 - Capability breakdown
 
 ---
@@ -37,6 +37,7 @@ Defines interfaces (protocols) required to fulfill contracts.
 - Must NOT include implementation logic
 - Must NOT reference specific technologies
 - Must NOT introduce behavior not defined in contract
+- Must identify source contracts under Derived From
 - Must name protocols based on capability (e.g., TicketValidator)
 
 ---

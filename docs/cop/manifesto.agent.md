@@ -113,6 +113,7 @@ When working in COP:
 - follow defined templates
 - produce complete artifacts
 - ensure outputs are usable by other agents
+- preserve artifact handoffs from contract to protocol to architecture to module to orchestrator to validation
 
 ---
 

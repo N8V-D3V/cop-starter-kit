@@ -10,8 +10,11 @@ This repository contains the foundational documents required to build software u
 
 - Human manifesto (what COP is and why it exists)
 - Agent manifesto (how AI agents must behave)
+- Workflow guide (standard COP artifact handoffs)
 - Contract template (standardized feature definition)
 - Contract usage rules (how to write effective contracts)
+- Protocol template (standardized capability definition)
+- Architecture plan template (standardized implementation planning)
 - Agent definitions (standard COP workflow roles)
 - Glossary (shared terminology)
 
@@ -31,8 +34,8 @@ This repository contains the foundational documents required to build software u
 ## How to use
 
 1. Read the documents in `docs/cop/`
-2. Follow the standard workflow, starting with the Contract Agent
-3. Use the contract as the source of truth for all implementation
+2. Follow `docs/cop/workflow.md`, starting with the Contract Agent
+3. Use the contract as the source of truth for all protocols, architecture, implementation, orchestration, and validation
 4. Ensure all work adheres to COP rules
 
 ---
