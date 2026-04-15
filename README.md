@@ -12,14 +12,26 @@ This repository contains the foundational documents required to build software u
 - Agent manifesto (how AI agents must behave)
 - Contract template (standardized feature definition)
 - Contract usage rules (how to write effective contracts)
+- Agent definitions (standard COP workflow roles)
 - Glossary (shared terminology)
+
+---
+
+## Standard workflow
+
+1. Contract Agent
+2. Protocol Agent
+3. Architecture Agent
+4. Module Agent
+5. Orchestrator Agent
+6. Validation Agent
 
 ---
 
 ## How to use
 
 1. Read the documents in `docs/cop/`
-2. Start by writing a contract using the template
+2. Follow the standard workflow, starting with the Contract Agent
 3. Use the contract as the source of truth for all implementation
 4. Ensure all work adheres to COP rules
 
