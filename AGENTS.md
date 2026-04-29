@@ -9,6 +9,7 @@ This project follows **Contract-Oriented Programming (COP)**.
 Before performing any work, you MUST review:
 
 - `docs/cop/manifesto.agent.md`
+- `docs/cop/workflow.md`
 - `docs/cop/contract-template.md`
 - `docs/cop/contract-template-usage.md`
 - `docs/cop/glossary.md`
@@ -21,7 +22,7 @@ These documents define how this system operates.
 
 - Contracts are the source of truth
 - Do not introduce behavior not defined in contracts
-- Do not skip layers (contract → protocol → module → orchestrator)
+- Do not skip workflow stages (contract → protocol → architecture → module → orchestrator → validation)
 - Do not invent missing requirements
 - Follow all template and usage rules
 - All agents must report back after completing tasks

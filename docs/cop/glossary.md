@@ -14,6 +14,11 @@ An interface that represents a capability required to fulfill a contract.
 
 ---
 
+## Architecture
+An implementation plan that maps protocols to modules, dependencies, orchestration boundaries, and data flow.
+
+---
+
 ## Module
 An implementation that fulfills one or more protocols.
 
@@ -30,7 +35,7 @@ An AI or human role responsible for performing a specific function within the CO
 ---
 
 ## Artifact
-A structured output produced during the development process (e.g., contract, protocol spec, validation report).
+A structured output produced during the development process (e.g., contract, protocol spec, architecture plan, validation report).
 
 ---
 
