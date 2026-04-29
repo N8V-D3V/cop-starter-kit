@@ -34,6 +34,8 @@ It helps solve:
 
 The core idea is simple: define behavior clearly first, then build against that definition.
 
+Version: 0.3.0
+
 ## How To Use This Repo
 
 You can use this repository in two common ways.
