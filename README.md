@@ -67,25 +67,26 @@ You can use this repository in two common ways.
 
 ## COP Workflow
 
-This starter kit follows the standard COP stage order:
+This starter kit follows the standard COP phase order:
 
-1. Contract
-2. Protocol
-3. Architecture
-4. Module
-5. Orchestrator
-6. Validation
+1. Define
+2. Shape
+3. Build
+4. Validate
+5. Release
 
-The contract remains the source of truth at every stage. Later artifacts should clarify or implement behavior, not invent it.
+The contract remains the source of truth at every phase. Later artifacts should clarify, prove, implement, validate, or release behavior, not invent it.
+
+Each phase must have a designated Accountable Owner before work begins. The owner may delegate work, but remains accountable until the phase exit criteria are met and the completion celebration occurs.
 
 ## COP Files In This Repo
 
 ### Core reference documents
 
 - `docs/cop/manifest.human.md`: explains COP for humans, including the philosophy, goals, and development cycle
-- `docs/cop/manifesto.agent.md`: defines the rules AI agents must follow when working in a COP system
-- `docs/cop/workflow.md`: describes the artifact handoffs and required order of work across COP stages
-- `docs/cop/glossary.md`: provides shared COP terminology such as contract, protocol, module, and orchestrator
+- `docs/cop/manifesto.agent.md`: defines the operating rules AI contributors must follow when working in a COP system
+- `docs/cop/workflow.md`: describes the phase flow, accountable ownership model, artifact handoffs, and required order of work
+- `docs/cop/glossary.md`: provides shared COP terminology such as contract, protocol, phase, Accountable Owner, module, orchestrator, and production proof
 
 ### Authoring templates
 
@@ -95,14 +96,13 @@ The contract remains the source of truth at every stage. Later artifacts should 
 - `docs/cop/architecture-plan-template.md`: template for mapping contracts and protocols into modules, dependencies, and orchestration boundaries
 - `docs/cop/report-template.md`: required structure for task completion reports in a COP workflow
 
-### Workflow role definitions
+### Phase definitions
 
-- `docs/cop/agents/contract-agent.md`: defines the role responsible for turning requirements into contracts
-- `docs/cop/agents/protocol-agent.md`: defines the role responsible for deriving capabilities and interfaces from contracts
-- `docs/cop/agents/architecture-agent.md`: defines the role responsible for planning modules, dependencies, and data flow
-- `docs/cop/agents/module-agent.md`: defines the role responsible for implementing protocols as concrete modules
-- `docs/cop/agents/orchestrator-agent.md`: defines the role responsible for coordinating modules into end-to-end behavior
-- `docs/cop/agents/validation-agent.md`: defines the role responsible for checking implementation against the contract
+- `docs/cop/phases/define-phase.md`: defines ownership and exit criteria for contract definition
+- `docs/cop/phases/shape-phase.md`: defines ownership and exit criteria for protocols, architecture, boundaries, and stubs
+- `docs/cop/phases/build-phase.md`: defines ownership and exit criteria for replacing stubs with real implementation
+- `docs/cop/phases/validate-phase.md`: defines ownership and exit criteria for checking implementation against the contract
+- `docs/cop/phases/release-phase.md`: defines ownership and exit criteria for deployment and production proof
 
 ### Project scaffolding
 
@@ -117,9 +117,10 @@ A healthy COP project usually has:
 - a clear product vision
 - contracts for important features
 - protocols derived from those contracts
-- architecture plans before implementation begins
+- architecture plans and stubs before real implementation begins
 - feature-based code organization that reflects contract boundaries
 - validation that checks behavior against the contract
+- release proof that confirms contract-defined behavior works in production
 
 ## Who This Starter Kit Is For
 
