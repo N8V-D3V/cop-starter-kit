@@ -1,6 +1,6 @@
 # Contract-Oriented Programming (COP) — Human Manifesto
 
-Version: 0.3.0
+Version: 0.4.0
 
 ---
 
@@ -18,7 +18,7 @@ Instead of starting with code, we start with clearly defined contracts that desc
 - what success looks like
 - what failure looks like
 
-Everything else — interfaces, architecture, modules, orchestration, and implementation — is derived from these contracts.
+Everything else — interfaces, architecture, stubs, modules, orchestration, implementation, validation, and release — is derived from these contracts.
 
 ---
 
@@ -74,6 +74,7 @@ Nothing important should be implicit.
 Contracts lead to:
 - protocols (capabilities)
 - architecture (implementation planning)
+- stubs (shape proof)
 - modules (implementations)
 - orchestrators (coordination)
 
@@ -86,12 +87,28 @@ We evolve systems by refining contracts, not patching behavior blindly.
 
 ---
 
+### 8. Every phase has an owner
+Each phase must have a designated Accountable Owner before work begins.
+
+The owner does not have to do all the work personally, but they are responsible for ensuring the work is understood, delegated, executed, reviewed, and completed.
+
+Their job is not done until the phase exit criteria are met and the completion celebration happens.
+
+---
+
+### 9. Production must be proven
+Release is not complete just because something is deployed.
+
+Release is complete only when the team can prove the contract-defined behavior is working correctly in production.
+
+---
+
 ## COP in the AI Era
 
 COP is designed to work with AI.
 
 It enables:
-- consistent outputs from AI agents
+- consistent outputs from AI contributors
 - reduced ambiguity
 - repeatable system design
 - structured collaboration between humans and AI
@@ -100,89 +117,140 @@ It enables:
 
 ## The COP Development Cycle
 
-COP systems are built through a repeatable cycle of validation and iteration.
+COP systems are built through a repeatable cycle of owned phases, validation, release, and iteration.
 
-Each stage must be completed and verified before moving forward.
+Each phase must have an Accountable Owner, clear exit criteria, and a completion celebration.
 
 ---
 
-### 1. Contract Alignment ✅
+### 1. Define
 
-Before any implementation begins:
+Before shaping or implementation begins:
 
 - Contracts must be complete, consistent, and unambiguous
 - Inputs, outputs, success, and failure must be clearly defined
 - All major system behavior must be captured
+- Open questions must be surfaced instead of guessed
 
-**Green Flag:**
-> The system behavior is clearly understood and agreed upon
+**Accountable Owner:**
+Ensures the contract is understood, drafted, reviewed, and completed.
 
-**Celebrate:**  
-You now understand what you are building.
+**Exit Criteria:**
+- Contract behavior is complete, consistent, and unambiguous enough to shape
+- Inputs and outputs are explicit
+- Success behavior, failure modes, edge cases, constraints, and acceptance criteria are defined
+
+**Completion Celebration:**
+> We know what this must do.
 
 ---
 
-### 2. Protocol and Architecture Planning 🧭
+### 2. Shape
 
-Before coding begins:
+Before real implementation begins:
 
 - Protocols must define the required capabilities
 - Architecture must map protocols to modules
 - Dependencies, orchestration boundaries, and data flow must be explicit
 - Architectural risks and guardrails must be identified
-
-**Green Flag:**
-> The implementation plan is clear before code is written
-
-**Celebrate:**  
-You know how the system will be built.
-
----
-
-### 3. Stubbed System Demo 🔧
-
-Before real implementation:
-
-- All modules must be implemented as stubs
 - Stubs must simulate contract-defined behavior
-- Stubs must log inputs, outputs, and decisions
-- No real processing or external integration should occur
+- The full system flow must work end-to-end using stubs
 
-**Green Flag:**
-> The full system works end-to-end using only stubbed modules
+**Accountable Owner:**
+Ensures protocols, architecture, boundaries, orchestration flow, and stubs are understood, delegated, executed, reviewed, and completed.
 
-**Celebrate:**  
-You have a working system — before writing real logic.
+**Exit Criteria:**
+- Protocols fully cover the contract
+- Architecture preserves protocol and contract boundaries
+- Stubs conform to protocols
+- The full system flow works end-to-end using stubs
+
+**Completion Celebration:**
+> The system shape works end-to-end.
 
 ---
 
-### 4. Implementation Demo 🚀
+### 3. Build
 
 After stub validation:
 
 - Real implementations replace stubs
 - Behavior must remain identical to the stubbed system
 - Contracts and protocols must still be strictly followed
+- Orchestration must coordinate through protocols
 
-**Green Flag:**
-> The real system produces correct outputs under real conditions
+**Accountable Owner:**
+Ensures implementation work is understood, delegated, executed, reviewed, and completed.
 
-**Celebrate:**  
-You now have a working, real system.
+**Exit Criteria:**
+- Real modules conform to protocols
+- Real orchestration coordinates through protocols
+- Implementation does not introduce behavior outside the contract
+- Real behavior matches the stubbed flow
+
+**Completion Celebration:**
+> It is real now.
 
 ---
 
-### 5. Iterate 🔁
+### 4. Validate
+
+Before release:
+
+- Implementation must be compared against the contract
+- Success behavior must be verified
+- Failure modes and edge cases must be checked
+- Mismatches must be corrected or explicitly documented
+
+**Accountable Owner:**
+Ensures the implementation, orchestration, tests, edge cases, and failure behavior are checked against the contract.
+
+**Exit Criteria:**
+- Contract requirements are verified
+- Success behavior is verified
+- Failure behavior and edge cases are verified
+- Any mismatch is corrected or explicitly documented
+
+**Completion Celebration:**
+> It matches what we promised.
+
+---
+
+### 5. Release
+
+Before the work is considered done:
+
+- The validated system must be deployed through the approved release path
+- Required production checks must pass
+- Production behavior must be observable
+- Production proof must be collected and reviewed
+
+**Accountable Owner:**
+Ensures the validated system is prepared for production, deployed, observed, and proven to work in production.
+
+**Exit Criteria:**
+- The validated system is deployed to production
+- Required production checks have passed
+- Observable production behavior matches the contract
+- Production proof is included in the release report
+
+**Completion Celebration:**
+> We can prove it works in production.
+
+---
+
+### 6. Iterate
 
 Systems evolve through iteration:
 
 - Contracts may be refined
 - Protocols may be updated
 - Modules may be improved
+- Release proof may expose new contracts or changes
 
 Each iteration repeats the cycle:
 
-> Contract Alignment → Protocol and Architecture Planning → Stub Demo → Implementation → Validation
+> Define -> Shape -> Build -> Validate -> Release
 
 ---
 
@@ -191,7 +259,7 @@ Each iteration repeats the cycle:
 > Prove it works.  
 > Show it works.  
 > Then make it real.  
-> Then make it better.
+> Then prove it works where users live.
 
 ---
 
@@ -209,4 +277,5 @@ COP is a way to bring clarity and structure to modern software development.
 ## Philosophy
 
 > Define the system clearly.  
-> Then let humans and AI build it correctly.
+> Give each phase an owner.
+> Then let humans and AI build, validate, and release it correctly.

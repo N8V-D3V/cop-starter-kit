@@ -1,6 +1,6 @@
-# Contract-Oriented Programming (COP) — Agent Manifesto
+# Contract-Oriented Programming (COP) — Operating Manifesto
 
-Version: 0.3.0
+Version: 0.4.0
 
 ---
 
@@ -20,26 +20,38 @@ You must follow these rules strictly.
 
 ---
 
-## 2. Do not skip workflow stages
+## 2. Do not skip workflow phases
 
 You must respect the COP structure and workflow:
 
-1. Contracts
-2. Protocols (interfaces)
-3. Architecture (implementation planning)
-4. Modules (implementations)
-5. Orchestrators (coordination)
-6. Validation
+1. Define
+2. Shape
+3. Build
+4. Validate
+5. Release
 
 You must not:
 - implement modules without a contract
 - bypass protocols
 - create hidden dependencies
 - proceed without validation
+- release without production proof
 
 ---
 
-## 3. No implementation leakage into contracts
+## 3. Every phase needs an Accountable Owner
+
+Each phase must have a designated Accountable Owner before phase work begins.
+
+The Accountable Owner is responsible for ensuring the phase is understood, delegated, executed, reviewed, and brought to completion.
+
+The Accountable Owner does not have to perform all work personally. They may delegate tasks to other people or AI contributors. However, accountability for phase completion remains with them.
+
+The Accountable Owner's responsibility ends only when the phase exit criteria are met and the completion celebration has occurred.
+
+---
+
+## 4. No implementation leakage into contracts
 
 When working on contracts:
 - do not include technologies
@@ -50,7 +62,7 @@ Contracts describe behavior only.
 
 ---
 
-## 4. Respect defined inputs and outputs
+## 5. Respect defined inputs and outputs
 
 - Do not add undocumented inputs
 - Do not produce undocumented outputs
@@ -58,7 +70,7 @@ Contracts describe behavior only.
 
 ---
 
-## 5. Failure modes are required
+## 6. Failure modes are required
 
 Every system must define:
 - what can go wrong
@@ -68,7 +80,7 @@ Do not assume "happy path only."
 
 ---
 
-## 6. Do not invent missing behavior
+## 7. Do not invent missing behavior
 
 If something is not defined:
 - do not guess
@@ -79,13 +91,13 @@ Instead:
 
 ---
 
-## 7. Follow constraints strictly
+## 8. Follow constraints strictly
 
 Constraints defined in contracts must never be violated.
 
 ---
 
-## 8. Prefer explicitness over cleverness
+## 9. Prefer explicitness over cleverness
 
 - Be clear
 - Be predictable
@@ -98,7 +110,7 @@ Avoid:
 
 ---
 
-## 9. Validation is required
+## 10. Validation is required
 
 When reviewing or implementing:
 - compare output against the contract
@@ -107,17 +119,17 @@ When reviewing or implementing:
 
 ---
 
-## 10. Produce structured outputs
+## 11. Produce structured outputs
 
 When working in COP:
 - follow defined templates
 - produce complete artifacts
-- ensure outputs are usable by other agents
-- preserve artifact handoffs from contract to protocol to architecture to module to orchestrator to validation
+- ensure outputs are usable by downstream phase owners and contributors
+- preserve artifact handoffs from contract to protocol to architecture to stubs to implementation to validation to release
 
 ---
 
-## 11. Prefer Feature-Based Structure
+## 12. Prefer Feature-Based Structure
 
 Implementation must be organized around features (capabilities), not types.
 
@@ -137,7 +149,7 @@ Each feature should be self-contained and may include:
 
 ---
 
-## 12. Align Structure to Contracts
+## 13. Align Structure to Contracts
 
 Where possible:
 
@@ -147,7 +159,7 @@ Where possible:
 
 ---
 
-## 13. Stub-First Development
+## 14. Stubs belong to the Shape phase
 
 All modules must first be implemented as stubs.
 
@@ -160,42 +172,48 @@ A stub implementation:
 
 ---
 
-## 14. Follow the COP Execution Cycle
+## 15. Follow the COP Phase Cycle
 
 You must follow this sequence:
 
-1. Contract Alignment
-2. Protocol Definition
-3. Architecture Planning
-4. Stub Module Implementation
-5. Stub System Demo
-6. Real Implementation
-7. Validation
+1. Define: create and approve the contract
+2. Shape: define protocols, architecture, boundaries, and stub demo
+3. Build: replace stubs with real implementation
+4. Validate: prove implementation matches the contract
+5. Release: deploy and prove production behavior
 
 ---
 
-## 15. Enforce Green Flag Progression
+## 16. Enforce Green Flag Progression
 
-You must not proceed to the next stage unless the current stage is validated.
+You must not proceed to the next phase unless the current phase is validated.
 
-### Contract Alignment Green Flag
+### Define Green Flag
 - Contracts are complete, consistent, and unambiguous
 
-### Stub Demo Green Flag
+### Shape Green Flag
 - System runs end-to-end using stub modules
 - Behavior matches contract expectations
 
-### Implementation Green Flag
+### Build Green Flag
 - Real system produces correct outputs
 - Behavior matches stubbed system
 
-If any stage fails:
+### Validate Green Flag
+- Implementation matches the contract
+- Success, failure, and edge cases are verified
 
-> Return to the previous stage and correct the issue
+### Release Green Flag
+- System is deployed to production
+- Observable production proof shows the contract-defined behavior works
+
+If any phase fails:
+
+> Return to the previous phase and correct the issue
 
 ---
 
-## 16. Preserve Behavioral Consistency
+## 17. Preserve Behavioral Consistency
 
 Real implementations must not introduce new behavior.
 
@@ -204,12 +222,22 @@ Real implementations must not introduce new behavior.
 
 ---
 
+## 18. Release requires production proof
+
+Release is not complete when the system is merely deployed.
+
+Release is complete only when production behavior can be proven with observable evidence, such as production smoke tests, health checks, logs, metrics, traces, user-visible verification, or other contract-aligned signals.
+
+If the system is in production but production behavior cannot be proven, the Release phase remains incomplete.
+
+---
+
 ## Summary
 
 Structure must reflect behavior, not technical categories.
 
-You are not just building code.
+You are not just building code or passing work between roles.
 
 You are:
 
-> validating system behavior step-by-step before making it real
+> defining, shaping, building, validating, and releasing behavior with accountable ownership at every phase

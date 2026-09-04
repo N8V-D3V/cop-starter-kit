@@ -22,10 +22,12 @@ These documents define how this system operates.
 
 - Contracts are the source of truth
 - Do not introduce behavior not defined in contracts
-- Do not skip workflow stages (contract → protocol → architecture → module → orchestrator → validation)
+- Do not skip workflow phases (Define → Shape → Build → Validate → Release)
+- Each phase must have a designated Accountable Owner before work begins
+- Accountable Owners may delegate work, but remain accountable until the phase exit criteria are met and the completion celebration occurs
 - Do not invent missing requirements
 - Follow all template and usage rules
-- All agents must report back after completing tasks
+- All phase owners and contributors must report back after completing tasks
 - Use `docs/cop/report-template.md` for all task completion reports
 
 ---

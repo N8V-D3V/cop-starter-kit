@@ -1,6 +1,6 @@
 # Report Template
 
-Version: 0.1.0
+Version: 0.2.0
 
 ---
 
@@ -8,7 +8,7 @@ Version: 0.1.0
 
 This template defines the required structure for task completion reports in a COP system.
 
-All agents must use this template after completing tasks.
+Phase owners and contributors must use this template after completing COP work.
 
 ---
 
@@ -19,6 +19,20 @@ All agents must use this template after completing tasks.
 - Keep reports explicit, concise, and structured
 - Surface open questions, ambiguities, and risks clearly
 - Do not introduce implementation details unless they are required by the task output
+- Identify the relevant phase and Accountable Owner when known
+- Include production proof for Release phase reports
+
+---
+
+## Phase
+
+- <Define | Shape | Build | Validate | Release | Other>
+
+---
+
+## Accountable Owner
+
+- <name or role>
 
 ---
 
@@ -47,6 +61,18 @@ All agents must use this template after completing tasks.
 
 - <ambiguity or risk>
 - <ambiguity or risk>
+
+---
+
+## Completion Celebration
+
+- <celebration statement or "Not reached">
+
+---
+
+## Production Proof
+
+- <required for Release phase; otherwise "Not applicable">
 
 ---
 
